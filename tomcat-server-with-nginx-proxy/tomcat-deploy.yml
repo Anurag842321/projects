@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tom-deploy
+  namespace: mytg
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tom
+  template:
+    metadata:
+      labels:
+        app: tom
+    spec:
+      containers:
+        - name: tomcat
+          image: 933538/testing:BUILD_ID
+          ports:
+            - containerPort: 8080
+
+
+
