@@ -25,7 +25,7 @@ pipeline {
         stage('Build Docker-Image') {
             steps {
             sh """
-            docker build -t $IMAGE_NAME:$TAG --no-cache .
+            docker build -t $IMAGE_NAME:$TAG -f tomcat-server-with-nginx-proxy/Dockerfile 
             """
             }
         }
