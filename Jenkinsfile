@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Chechout From GitHub') {
             steps {
-                git credentialsId: 'd7600991-23ca-479e-a2a2-6541db1321ef'
-                    url: 'https://github.com/Anurag842321/projects.git'
+                git credentialsId: 'd7600991-23ca-479e-a2a2-6541db1321ef',
+                    url: 'https://github.com/Anurag842321/projects.git',
                     branch: 'main'
             }
         }
