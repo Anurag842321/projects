@@ -53,7 +53,7 @@ pipeline {
             steps {
             sh"""
             echo "updating Image Placeholder in YAML..."
-            sed -i "s/BUILD_NUMBER/${TAG}/g" tomcat-server-with-nginx-proxy/tomcat-deploy.yml
+            sed -i "s/BUILD_ID/${TAG}/g" tomcat-server-with-nginx-proxy/tomcat-deploy.yml
 
             echo "Deploying YAML Files"
             kubectl apply -f tomcat-server-with-nginx-proxy/
